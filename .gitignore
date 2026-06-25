@@ -1,0 +1,38 @@
+# ==========================================
+# Katalogi budowania i obiekty tymczasowe
+# ==========================================
+# Jeśli używasz nowoczesnego CMake/własnego katalogu:
+build/
+build_*/
+
+# Tradycyjne katalogi wyjściowe systemów BSD/Minix:
+obj/
+obj.*/
+destdir.*/
+releasedir/
+
+# ==========================================
+# Pliki generowane przez kompilator
+# ==========================================
+*.o
+*.os
+*.a
+*.so
+*.d
+*.i
+*.s
+
+# ==========================================
+# Logi i pliki diagnostyczne
+# ==========================================
+*.log
+*.out
+compile_commands.json
+
+# ==========================================
+# Pliki środowiska / edytorów (opcjonalnie)
+# ==========================================
+.vscode/
+.idea/
+*.swp
+.DS_Store

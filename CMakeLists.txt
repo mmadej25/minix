@@ -1,5 +1,6 @@
 # CMakeLists.txt (Główny)
 cmake_minimum_required(VERSION 3.20)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 project(MinixOverhaul LANGUAGES C CXX ASM)
 
 # Wymuszenie standardów (C99 dla starego kodu, C++17 pod Twoje przepisywanie)

@@ -20,7 +20,6 @@ releasedir/
 *.so
 *.d
 *.i
-*.s
 
 # ==========================================
 # Logi i pliki diagnostyczne
@@ -32,6 +31,7 @@ compile_commands.json
 # ==========================================
 # Pliki środowiska / edytorów (opcjonalnie)
 # ==========================================
+.cache/
 .vscode/
 .idea/
 *.swp

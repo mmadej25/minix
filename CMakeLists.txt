@@ -26,12 +26,13 @@ add_compile_definitions(
     _POSIX_SOURCE=1 
     _MINIX=1 
     _SYSTEM=1
+    _EM_WSIZE=4
 )
 
 # Ścieżki do plików nagłówkowych (.h) MINIX-a
 # (Załóżmy, że oryginalne pliki wrzucisz do katalogu include/ i src/kernel/)
 include_directories(include)
-include_directories(kernel)
 
 # Podpinamy podkatalog z kodem źródłowym samego jądra
 add_subdirectory(kernel)
+add_subdirectory(servers/pm)

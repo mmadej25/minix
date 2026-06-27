@@ -7,10 +7,10 @@ set(CMAKE_CXX_STANDARD 17)
 
 add_compile_options(
     -march=i686
-    -m32                     # Kompilacja 32-bitowa (architektura x86 MINIX-a)
-    -ffreestanding           # Brak standardowych bibliotek/nagłówków hosta
-    -fno-builtin             # Wyłączenie wbudowanych funkcji optymalizacyjnych GCC
-    -fno-strict-aliasing     # Kluczowe dla niskopoziomowych manipulacji wskaźnikami w jądre
+    -m32
+    -ffreestanding
+    -fno-builtin
+    -fno-strict-aliasing
     -Wall
     -Wextra
 )
@@ -31,4 +31,5 @@ add_subdirectory(servers/pm)
 add_subdirectory(servers/fs)
 add_subdirectory(servers/rs)
 add_subdirectory(drivers/tty)
+add_subdirectory(drivers/memory)
 

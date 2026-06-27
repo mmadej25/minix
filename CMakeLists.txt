@@ -28,3 +28,5 @@ include_directories(include)
 
 add_subdirectory(kernel)
 add_subdirectory(servers/pm)
+add_subdirectory(servers/fs)
+

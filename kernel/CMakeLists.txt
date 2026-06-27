@@ -13,4 +13,31 @@ add_library(minix_kernel STATIC
     system.c
     table.c
     utility.c
+    system/do_abort.c
+    system/do_copy.c
+    system/do_devio.c
+    system/do_endksig.c
+    system/do_exec.c
+    system/do_exit.c
+    system/do_fork.c
+    system/do_getinfo.c
+    system/do_getksig.c
+    system/do_int86.c
+    system/do_irqctl.c
+    system/do_kill.c
+    system/do_memset.c
+    system/do_newmap.c
+    system/do_nice.c
+    system/do_privctl.c
+    system/do_sdevio.c
+    system/do_segctl.c
+    system/do_setalarm.c
+    system/do_sigreturn.c
+    system/do_sigsend.c
+    system/do_times.c
+    system/do_trace.c
+    system/do_umap.c
+    system/do_unused.c
+    system/do_vcopy.c
+    system/do_vdevio.c
 )

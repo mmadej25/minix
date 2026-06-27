@@ -30,4 +30,5 @@ add_subdirectory(kernel)
 add_subdirectory(servers/pm)
 add_subdirectory(servers/fs)
 add_subdirectory(servers/rs)
+add_subdirectory(drivers/tty)
 

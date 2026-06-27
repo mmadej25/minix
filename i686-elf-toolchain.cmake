@@ -9,7 +9,7 @@ set(CMAKE_SYSTEM_PROCESSOR i686)
 # Wskazujemy ścieżki do cross-narzędzi wygenerowanych przez crossdev
 set(CMAKE_C_COMPILER i686-elf-gcc)
 set(CMAKE_CXX_COMPILER i686-elf-g++)
-set(CMAKE_ASM_COMPILER i686-elf-as)
+set(CMAKE_ASM_COMPILER i686-elf-gcc)
 
 # Zabezpieczenie przed szukaniem bibliotek w systemie hosta (Gentoo)
 set(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)

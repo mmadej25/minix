@@ -28,6 +28,7 @@ add_subdirectory(servers/rs)
 add_subdirectory(drivers/tty)
 add_subdirectory(drivers/memory)
 add_subdirectory(drivers/log)
+add_subdirectory(drivers/at_wini)
 
 find_program(CMAKE_FORMAT_PROGRAM cmake-format)
 

@@ -32,4 +32,5 @@ add_subdirectory(servers/fs)
 add_subdirectory(servers/rs)
 add_subdirectory(drivers/tty)
 add_subdirectory(drivers/memory)
+add_subdirectory(drivers/log)
 

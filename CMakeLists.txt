@@ -6,23 +6,18 @@ set(CMAKE_C_STANDARD 99)
 set(CMAKE_CXX_STANDARD 17)
 
 add_compile_options(
-    -march=i686
-    -m32
-    -ffreestanding
-    -fno-builtin
-    -fno-strict-aliasing
-    -Wall
-    -Wextra
-)
+  -march=i686
+  -m32
+  -ffreestanding
+  -fno-builtin
+  -fno-strict-aliasing
+  -Wall
+  -Wextra)
 
 add_compile_options($<$<COMPILE_LANGUAGE:CXX>:-fno-rtti>)
 add_compile_options($<$<COMPILE_LANGUAGE:CXX>:-fno-exceptions>)
 
-add_compile_definitions(
-    _POSIX_SOURCE=1 
-    _MINIX=1 
-    _EM_WSIZE=4
-)
+add_compile_definitions(_POSIX_SOURCE=1 _MINIX=1 _EM_WSIZE=4)
 
 include_directories(include)
 
@@ -34,3 +29,18 @@ add_subdirectory(drivers/tty)
 add_subdirectory(drivers/memory)
 add_subdirectory(drivers/log)
 
+find_program(CMAKE_FORMAT_PROGRAM cmake-format)
+
+if(CMAKE_FORMAT_PROGRAM)
+  file(
+    GLOB_RECURSE CMAKE_FILES
+    LIST_DIRECTORIES false
+    "CMakeLists.txt" "*.cmake")
+
+  add_custom_target(
+    format
+    COMMAND ${CMAKE_FORMAT_PROGRAM} -i ${CMAKE_FILES}
+    COMMENT "Format CMake scripts using cmake-format...")
+else()
+  message(WARNING "Couldn't find cmake-format.")
+endif()

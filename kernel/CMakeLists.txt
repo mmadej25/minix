@@ -7,6 +7,8 @@ add_library(
   exception.c
   debug.c
   main.c
+  mpx386_att.S
+  klib386_att.S
   proc.c
   protect.c
   start.c

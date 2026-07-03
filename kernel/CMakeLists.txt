@@ -1,7 +1,10 @@
-# src/kernel/CMakeLists.txt
+# ==============================================================================
+# kernel/CMakeLists.txt
+# CMake configuration for the low-level architecture-specific library
+# ==============================================================================
 
-add_library(
-  minix_kernel STATIC
+add_executable(
+  kernel
   clock.c
   i8259.c
   exception.c
@@ -42,3 +45,18 @@ add_library(
   system/do_unused.c
   system/do_vcopy.c
   system/do_vdevio.c)
+
+# Target link options: enforce custom linker script and freestanding environment
+target_link_options(kernel PRIVATE "-T" "${CMAKE_CURRENT_SOURCE_DIR}/kernel.ld"
+                    "-nostdlib" "-Wl,--gc-sections")
+
+# Generate a linker symbol map file for debugging purposes
+target_link_options(kernel PRIVATE "-Wl,-Map=kernel.map")
+
+target_link_libraries(kernel PRIVATE misc)
+target_link_libraries(kernel PRIVATE string)
+target_link_libraries(kernel PRIVATE rts)
+target_link_libraries(kernel PRIVATE timers)
+target_link_libraries(kernel PRIVATE ansi)
+target_link_libraries(kernel PRIVATE other)
+target_link_libraries(kernel PRIVATE posix)

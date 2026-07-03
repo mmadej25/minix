@@ -21,7 +21,6 @@ add_compile_definitions(_POSIX_SOURCE=1 _MINIX=1 _EM_WSIZE=4)
 
 include_directories(include)
 
-add_subdirectory(kernel)
 add_subdirectory(servers/pm)
 add_subdirectory(servers/fs)
 add_subdirectory(servers/rs)
@@ -30,6 +29,14 @@ add_subdirectory(drivers/tty)
 add_subdirectory(drivers/memory)
 add_subdirectory(drivers/log)
 add_subdirectory(drivers/at_wini)
+add_subdirectory(lib/ansi)
+add_subdirectory(lib/other)
+add_subdirectory(lib/posix)
+add_subdirectory(lib/i386/misc)
+add_subdirectory(lib/i386/string)
+add_subdirectory(lib/i386/rts)
+add_subdirectory(lib/timers)
+add_subdirectory(kernel)
 
 find_program(CMAKE_FORMAT_PROGRAM cmake-format)
 

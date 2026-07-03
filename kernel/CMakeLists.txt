@@ -1,6 +1,6 @@
 # ==============================================================================
-# kernel/CMakeLists.txt
-# CMake configuration for the low-level architecture-specific library
+# kernel/CMakeLists.txt CMake configuration for the low-level
+# architecture-specific library
 # ==============================================================================
 
 add_executable(

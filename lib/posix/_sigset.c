@@ -9,9 +9,9 @@
  * before the sigset-changing routines are called.
  */
 //#define sigaddset	_sigaddset
-#define sigdelset	_sigdelset
+//#define sigdelset	_sigdelset
 //#define sigemptyset	_sigemptyset
-#define sigfillset	_sigfillset
+//#define sigfillset	_sigfillset
 //#define sigismember	_sigismember
 #include <signal.h>
 

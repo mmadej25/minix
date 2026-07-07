@@ -1,5 +1,5 @@
 #include <lib.h>
-#define fstat	_fstat
+//#define fstat	_fstat
 #include <sys/stat.h>
 
 PUBLIC int fstat(fd, buffer)

@@ -1,5 +1,5 @@
 #include <lib.h>
-#define read	_read
+//#define read	_read
 #include <unistd.h>
 
 PUBLIC ssize_t read(fd, buffer, nbytes)

@@ -1,5 +1,5 @@
 #include <lib.h>
-#define open	_open
+//#define open	_open
 #include <fcntl.h>
 #include <stdarg.h>
 #include <string.h>

@@ -1,5 +1,5 @@
 #include <lib.h>
-#define close	_close
+//#define close	_close
 #include <unistd.h>
 
 PUBLIC int close(fd)

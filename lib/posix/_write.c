@@ -1,5 +1,5 @@
 #include <lib.h>
-#define write	_write
+//#define write	_write
 #include <unistd.h>
 
 PUBLIC ssize_t write(fd, buffer, nbytes)

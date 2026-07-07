@@ -1,8 +1,9 @@
-#define _exit	__exit
+//#define _exit	__exit
 #include <lib.h>
 #include <unistd.h>
 
-PUBLIC void _exit(status)
+//PUBLIC void _exit(status)
+PUBLIC void exit(status)
 int status;
 {
   message m;

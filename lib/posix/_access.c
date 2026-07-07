@@ -1,5 +1,5 @@
 #include <lib.h>
-#define access	_access
+//#define access	_access
 #include <unistd.h>
 
 PUBLIC int access(name, mode)

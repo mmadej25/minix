@@ -1,5 +1,5 @@
 #include <lib.h>
-#define lseek	_lseek
+//##define lseek	_lseek
 #include <unistd.h>
 
 PUBLIC off_t lseek(fd, offset, whence)

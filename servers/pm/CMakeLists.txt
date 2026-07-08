@@ -17,7 +17,7 @@ add_executable(
   utility.c)
 
 target_link_options(
- pm 
+  pm
   PRIVATE
   "-T"
   "${CMAKE_CURRENT_SOURCE_DIR}/pm.ld"

@@ -1,6 +1,7 @@
 # lib/syslib/CMakeLists.txt
 
-add_library(syslib STATIC
+add_library(
+  syslib STATIC
   sys_times.c
   sys_abort.c
   sys_exec.c
@@ -33,7 +34,6 @@ add_library(syslib STATIC
   sys_voutl.c
   sys_setalarm.c
   sys_memset.c
-  taskcall.c
-)
+  taskcall.c)
 
 target_include_directories(syslib PRIVATE ${CMAKE_SOURCE_DIR}/include)

@@ -47,8 +47,14 @@ add_executable(
   system/do_vdevio.c)
 
 # Target link options: enforce custom linker script and freestanding environment
-target_link_options(kernel PRIVATE "-T" "${CMAKE_CURRENT_SOURCE_DIR}/kernel.ld"
-                    "-nostdlib" "-Wl,--gc-sections")
+target_link_options(
+  kernel
+  PRIVATE
+  "-T"
+  "${CMAKE_CURRENT_SOURCE_DIR}/kernel.ld"
+  "-static"
+  "-nostdlib"
+  "-Wl,--gc-sections")
 
 # Generate a linker symbol map file for debugging purposes
 target_link_options(kernel PRIVATE "-Wl,-Map=kernel.map")

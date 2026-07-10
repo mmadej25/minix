@@ -14,6 +14,7 @@ add_library(
   memmove_att.S
   _memmove_att.S
   memchr_att.S
+  memset_att.S
   strrchr_att.S
   strlen_att.S
   strcpy_att.S

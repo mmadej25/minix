@@ -39,6 +39,7 @@ add_subdirectory(lib/timers)
 add_subdirectory(lib/syslib)
 add_subdirectory(lib/sysutil)
 add_subdirectory(lib/end)
+add_subdirectory(lib/fphook)
 add_subdirectory(kernel)
 
 find_program(CMAKE_FORMAT_PROGRAM cmake-format)

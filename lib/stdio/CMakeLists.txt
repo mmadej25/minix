@@ -1,0 +1,56 @@
+set(STDIO_SOURCES
+    clearerr.c
+    data.c
+    doprnt.c
+    doscan.c
+    ecvt.c
+    fclose.c
+    feof.c
+    ferror.c
+    fflush.c
+    fgetc.c
+    fgetpos.c
+    fgets.c
+    fileno.c
+    fillbuf.c
+    flushbuf.c
+    fopen.c
+    fprintf.c
+    fputc.c
+    fputs.c
+    fread.c
+    freopen.c
+    fscanf.c
+    fseek.c
+    fsetpos.c
+    ftell.c
+    fwrite.c
+    getc.c
+    getchar.c
+    gets.c
+    icompute.c
+    mktemp.c
+    perror.c
+    printf.c
+    putc.c
+    putchar.c
+    puts.c
+    remove.c
+    rewind.c
+    scanf.c
+    setbuf.c
+    setvbuf.c
+    sprintf.c
+    sscanf.c
+    tmpfile.c
+    tmpnam.c
+    ungetc.c
+    vfprintf.c
+    vprintf.c
+    vscanf.c
+    vsprintf.c
+    vsscanf.c)
+
+add_library(stdio STATIC ${STDIO_SOURCES})
+
+target_compile_definitions(stdio PRIVATE _MINIX _POSIX_SOURCE)

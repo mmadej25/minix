@@ -9,7 +9,9 @@
 
 #include	<sys/types.h>
 
+#define _lseek lseek
 off_t _lseek(int fildes, off_t offset, int whence);
+#define _write write
 ssize_t _write(int d, const char *buf, int nbytes);
 int _isatty(int d);
 extern void (*_clean)(void);

@@ -7,7 +7,9 @@
 #include	<stdio.h>
 #include	"loc_incl.h"
 
+#define _write write
 ssize_t _write(int d, const char *buf, size_t nbytes);
+#define _lseek lseek
 off_t _lseek(int fildes, off_t offset, int whence);
 
 int

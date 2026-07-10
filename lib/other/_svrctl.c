@@ -3,7 +3,7 @@
  */
 #include <lib.h>
 #include <stdio.h>
-#define svrctl _svrctl
+//#define svrctl _svrctl
 #include <sys/svrctl.h>
 
 int svrctl(int request, void *argp)

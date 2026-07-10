@@ -28,13 +28,17 @@ target_link_options(
 # Generate a linker symbol map file for debugging purposes
 target_link_options(pm PRIVATE "-Wl,-Map=pm.map")
 
-target_link_libraries(pm PRIVATE rts)
-target_link_libraries(pm PRIVATE posix)
-target_link_libraries(pm PRIVATE misc)
-target_link_libraries(pm PRIVATE string)
-target_link_libraries(pm PRIVATE timers)
-target_link_libraries(pm PRIVATE ansi)
-target_link_libraries(pm PRIVATE syslib)
-target_link_libraries(pm PRIVATE sysutil)
-target_link_libraries(pm PRIVATE end)
-target_link_libraries(pm PRIVATE other)
+target_link_libraries(
+  pm
+  PRIVATE -Wl,--start-group
+          rts
+          posix
+          misc
+          string
+          timers
+          ansi
+          -Wl,--end-group
+          syslib
+          sysutil
+          end
+          other)

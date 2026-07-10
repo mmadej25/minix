@@ -13,7 +13,10 @@ add_library(
   _write.c
   _access.c
   _fstat.c
-  __exit.c)
+  __exit.c
+  _tcgetattr.c
+  _ioctl.c
+  _isatty.c)
 
 # Ensure the library targets the correct architecture and compiler flags
 target_compile_options(posix PRIVATE "-m32")
